@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>metode map,filter dan reduce juga termasuk dalam kategori higher order pada array</p>
+
+
+    <script>
+
+        let angka = [2, 3, 5, 10, 2, 1, 2];
+
+        const genap = [];
+        const ganjil = [];
+
+        // memfilter sesuai konsdisi yang kita buat tanpa merubah data asli atau tanpa membuat data array baru
+        angka.filter(value => value%2==0? genap.push(value) : ganjil.push(value));
+        console.log(`bilangan genap: ${genap.join(',')}, ganjil: ${ganjil}`);
+
+        // map digunakn untuk memetakan array berdasarkan kondisi yang kita buat dan mengahasilkan array baru
+        let baru = angka.map(value => value*2)
+        console.log(baru)
+
+        // reduce digunakan untuk mengeksekusi nilai setiap index dari array,dimana parameter ke-1 adalah acumulator atau hasil dari penjumlahan angkanya dan parameter ke-2 adalah value dari data array,angak 0 pada akgiran adalah penentu start dari mana(optional)
+        let result = angka.reduce((accumulator, value) => accumulator + value, 0)
+        console.log(`hasil penjumlahan dari data array tersebut adalah ${result}`)
+        
+
+        const p = document.querySelector('p');
+
+        const keluarga = [
+            {nama: 'ismail'},
+            {nama: 'mutinah'},
+            {nama: 'sani'},
+            {nama: 'irfi'},
+            {nama: 'dansih'}
+            ];
+
+        const apaaja =  keluarga.map(value => `
+        ${value.nama}`)
+        
+        const bar = apaaja.join(' ');
+        p.innerText = `${bar}`
+    </script>
+</body>
+</html>

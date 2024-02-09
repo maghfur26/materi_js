@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function generator akan marubah data seperti aray tp bukan aray dalam artian tdk bisa di indexing,hanya bisa di iterasi
+
+        function* myNmame(){
+            fullName = "maghfur hasani"
+            document.writeln(fullName)
+            yield fullName
+        };
+
+        let nama = myNmame() //disini function tdk akan langung terpanggil krn function generator hanya bs dipakai untuk iterasi
+
+        for(nama of myNmame()){
+            document.writeln(nama)
+        } // disini baru isi dari function akan muncul karena kita melakukan iterasi(proses atau metode yg digunakan berulang-ulang)
+
+
+    </script>
+</body>
+</html>

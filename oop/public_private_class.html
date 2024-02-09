@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //public var di dalam oop tiggal ketika nama varnya saja
+        class Employee{
+            //public var start
+            firstName;
+            lastName;
+            //public var end
+
+            constructor(firstName, lastName){
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+
+            get fullName() {
+                return this.firstName + " " + this.lastName;
+            }
+
+            set fullName([firstName, lastName]){
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+
+            sayHello(name){
+                return `Hello ${name}, my name is ${this.fullName}`;
+            }
+        }
+
+        const sapa = new Employee("maghfur", "hasani");
+
+        console.log(sapa.sayHello("irfi"))
+
+
+        //private var in oop hanya dapat di akses di dalam class itu sendiri 
+        class Aritmatika{
+            //private var start
+            #hasil = 0
+            //private var end
+
+            constructor(value1, value2){
+                this.value1 = value1;
+                this.value2 = value2;
+            }
+
+            increment(){
+                this.#hasil = this.value1 + this.value2;
+                return this.#hasil
+            }
+        }
+
+        const penjumlahan = new Aritmatika(2, 3);
+        console.log(`Hasil dari ${penjumlahan.value1} dan ${penjumlahan.value2} = ${penjumlahan.increment()}`)
+        //console.log(penjumlahan.#hasil) //akan eror karena privat var hanya bisa di akses di parentnya
+    </script>
+
+</body>
+</html>

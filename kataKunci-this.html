@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.info(this);
+
+        function sample(){
+            console.info(this);  //this di function akan mengarah ke window
+    
+            function inner(){
+                console.info(this);
+            }
+    
+            inner();
+        }
+    
+        sample();
+    
+        const person = {
+            name: "Eko",
+            sayHello: function (value){
+                console.info(`Hello ${value} My Name is ${this.name}`); //jika di object metode maka this akan mengrah ke var penampung
+            }
+        };
+    
+        person.sayHello("Budi");
+        person.sayHello("Joko");
+
+    </script>
+</body>
+</html>

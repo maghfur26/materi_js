@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        class Operator{
+            constructor(nilai1, nilai2){
+                this.nilai1 = nilai1;
+                this.nilai2 = nilai2;
+            }
+            
+            penjumlahan(){
+                return this.nilai1 + this.nilai2; 
+            }
+
+            pengurangan(){
+                return this.nilai1 - this.nilai2;
+            }
+        }
+
+        class Tambah extends Operator{
+            constructor(nilai1, nilai2, hasil){
+                super(nilai1, nilai2);
+                this.hasil = hasil
+            }
+
+            tasu(){
+                super.penjumlahan(); //super untuk mengambil 1 metode dan memodifiksinya
+                return this.nilai1 + this.nilai2 
+            }
+        }
+
+        const tambah = new Tambah(1, 3);
+        console.log(`hasil dari ${tambah.nilai1} + ${tambah.nilai2} adalah ${tambah.tasu()}`)
+
+    </script>
+
+
+</body>
+</html>

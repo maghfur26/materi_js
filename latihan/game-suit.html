@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function result(value){
+            // declaration of result
+            let hasil = '';
+
+            if(user==comp){
+                hasil = "Seri";
+            }else if(user=="gajah"){
+                hasil = (comp=="orang") ? "Anda Kalah" : "Anda Menang";
+            }else if(user=="semut"){
+                hasil = (comp=="orang") ? "Anda Menang" : "Anda Kalah";
+            }else if(user=="orang"){
+                hasil = (comp=="gajah") ? "Anda Menang" : "Anda Kalah";
+            }else{
+                hasil= "ngaco lu"
+            }
+            return hasil
+        }
+
+        function comp_init(value) {
+            // Declaration of comp value
+            let hasil = ""
+            if(value<0.33){
+                hasil = "orang"
+            }
+
+            else if(value>0.33 && value<0.50){
+                hasil = "semut"
+            }
+
+            else{
+                hasil = "gajah"
+            }
+            return hasil
+        }
+
+        // Main program
+        
+        //place of input computer
+        let comp = Math.random()
+        let pc = comp_init(comp)
+        
+        let user = prompt("pilih [gajah,semut,orang]: ")
+        console.log(comp)
+        //branching
+        alert(result(user))
+
+    </script>
+</body>
+</html>

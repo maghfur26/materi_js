@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .kotak{
+            cursor: pointer;
+            margin: 30px auto;
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            transition: .7s width ease-in-out,
+                        .5s height ease-in-out,
+                        .5s background-color ease-in;
+        }
+
+        .size{
+            width: 250px;
+            height: 200px;
+        }
+
+        .bg{
+            background-color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <p>this pada erow function akan mencari ke element atasnya kemudian keatasnya lg,jika tidak ketemu maka dia akan mengacu ke pada window</p>
+
+
+    <div class="kotak"></div>
+    
+    
+    <script>
+
+        const kotak = document.querySelector('.kotak')
+
+        kotak.addEventListener('click', function(){
+            let satu = 'size';
+            let dua = 'bg';
+            
+            if(this.classList.contains(satu)){
+                [satu, dua] = [dua, satu];
+            }
+
+            this.classList.toggle(satu);
+            // arrow function tidak memiliki this maka di setTimeout akan mencari keatas sementara jika memakai anonimus function maka dia akan mengarah ke window jika diterpkan di setTimeout
+            setTimeout(() => {
+                this.classList.toggle(dua)
+            }, 600)
+        })
+
+    </script>
+</body>
+</html>

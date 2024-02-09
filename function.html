@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //matematika start
+        function penjumlahan(angka1, angka2) {
+            return angka1 + angka2
+        }
+
+        function perkalian(angka1, angka2) {
+            return angka1 * angka2
+        }
+
+        choice = prompt("penjumlahan atau perkalian")
+
+        angka1 = parseInt(prompt("masukan angka ke-1: "))
+        angka2 = parseInt(prompt("masukan angka ke-2: "))
+        
+        if(choice==="penjumlahan"){
+            document.writeln(`hasil penjumlahan: ${penjumlahan(angka1, angka2)}`)
+        } else if (choice === "perkalian") {
+            document.writeln(`hasil perkalian: ${perkalian(angka1, angka2)}`)
+        } 
+        //matematika end
+    </script>
+</body>
+</html>

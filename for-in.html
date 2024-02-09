@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //biasanya digunakan untuk tipe data object karena for in digunakan untuk mengambil atribut dan nilainya
+        let nama = {
+            saya: "maghfur hasani",
+            adik: "irfi"
+        }
+
+        for(i in nama) {
+            document.writeln(`${i} : ${nama[i]}`)
+        }
+
+        let data= {
+            nama: "maghfur hasani",
+            alamat: "bantarbolang",
+            sekolah: "smkn 1 pemalang"
+        }
+
+        for(i in data) {
+            document.writeln(`${i} : ${data[i]}`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array1 = ["a", "b", "c", 1, 2, 3].length;
+        console.log(array1)
+
+        //menggabungkan aray dgn .concat
+        let array2 = ["maghfur", "irfi", "mutinah", "ismail"]
+        let update = array2.concat(["danish"])
+        document.writeln(update)
+    
+        //menghapus elemnt terakhir dan mereturn valuenya
+        update.pop() //menghapus data akhir dari array dan mengambil nilainya
+        document.writeln(update) //sisa datanya tdk ada data terakhirnya
+
+        delete array2[1] // menghapus index tertentu,value akan hilang tp indexnya masih ttp ada dgn nilai undefined
+        document.writeln(`update = ${array2}`)
+
+        array2[1]= "irfi"
+
+        //menambhakan nilai
+        array2.push("danish")
+        document.writeln(array2)
+
+        //slice index = index -1
+        //slice(index awal, index akhir),slice menghasilkan index baru jadi harus di tampung di var baru
+        let slice = array2.slice(0,3)
+        console.info(slice)
+
+        //splice(index start, dihapus berapa, +element apa)
+        slice.splice(1, 0, "hasani")
+        console.log(slice)
+
+    </script>
+</body>
+</html>

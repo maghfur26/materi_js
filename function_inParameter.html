@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ucap(nama) {
+            document.writeln(`hello  ${nama}`)
+        }
+
+        const say= ucap
+
+        function giveMeName(callback) {
+            callback("hasan")
+        }
+
+        giveMeName(say) // berarti giveMeName(akan memanggil function say dan diberi parameter yg ada di dalam function giveMeName)
+
+       
+       
+        function data() {
+            const myDate = {
+                nama: "maghfur hasani",
+                prodi: "Teknologi informasi",
+                kelas: "17.1A.35"
+            }
+
+            document.writeln(`nama saya: ${myDate.nama} asal prodi: ${myDate.prodi} kelas: ${myDate.kelas}`)
+        }
+
+        const dataSaya = data
+
+        function perkenalan() {
+            document.writeln("<p>perkenalkan</p>")
+        }
+
+        dataSaya(perkenalan())
+    </script>
+</body>
+</html>

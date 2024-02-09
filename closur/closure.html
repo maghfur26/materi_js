@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Secara definisi, closures adalah inner function yang punya hak akses ke scope di dalam function di mana dia bernaung, dan scope-scope di function luar lain nya.
+
+    <script>
+
+        let global = "apa kabar?";
+        
+        function PanggilNama(nama) {
+            // inier function dibawah inilah yg dinamakan closer karena dia bisa mengakses semua entah itu var global, baik dari parent function ataupun local function(closure hanya mengakses var yg bukan berada di local scopnya tanpa kita mendefinisikan sebuah var didalam iner functionynya)
+            return (waktu) => { 
+                console.log(`halo ${nama}, selamat ${waktu}`)
+                console.log(global);
+            }
+        }
+
+        let nama = PanggilNama("maghfur hasani");
+        nama()
+
+
+
+
+
+    </script>
+</body>
+</html>

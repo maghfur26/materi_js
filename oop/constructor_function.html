@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //konstructor funtion diawali dengan huruf besar
+        function Person(firstName, lastName){
+            this.firstName= firstName;
+            this.lastName= lastName;
+            this.sayHello = function () {
+                console.log(`Hello ${this.firstName} ${this.lastName}`)
+            }
+        }
+
+        let data = new Person("maghfur", "hasani");
+        console.log(data)
+
+
+
+
+    </script>
+
+</body>
+</html>

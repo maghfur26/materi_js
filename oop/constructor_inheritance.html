@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //ketika menggunakan constructor function harus menggunakan awalan huruf besar, menggunakan this dan new ketika melakukan iterasi,contoh dibagian let update
+        function Employe(firstName){
+            this.firstName = firstName;
+            this.sayHello = function() {
+                console.log(`hello nama saya ${firstName}`)
+            }
+        }
+
+        function Manager(firstName, lastName){
+            this.lastName = lastName
+            Employe.call(this, firstName);
+        }
+
+        let update = new Manager("maghfur", "hasani");
+        
+        console.log(update)
+
+
+    </script>
+
+</body>
+</html>

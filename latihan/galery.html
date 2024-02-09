@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="public/style.css" />
+  </head>
+  <body>
+    <div class="container w-[600px] p-2 bg-slate-400 mx-auto overflow-hidden">
+      <div class="hero mb-2">
+        <img class="h-60 leading-none w-[100%] lg:h-[300px] border-2 border-slate-200" src="https://source.unsplash.com/random/?programming" alt="" />
+      </div>
+      <div class="thumbnail grid grid-cols-3 border-2 border-slate-200 gap-1 group cursor-pointer">
+        <img class="thumb h-40 w-[200px] hover:opacity-50" src="https://source.unsplash.com/random/?programming" alt="" />
+        <img class="thumb h-40 w-[200px] hover:opacity-50" src="https://source.unsplash.com/random/?program" alt="" />
+        <img class="thumb h-40 w-[200px] hover:opacity-50" src="https://source.unsplash.com/random/?coding" alt="" />
+        <img class="thumb h-40 w-[200px] hover:opacity-50" src="https://source.unsplash.com/random/?game" alt="" />
+        <img class="thumb h-40 w-[200px] hover:opacity-50" src="https://source.unsplash.com/random/?laptop" alt="" />
+        <img class="thumb h-40 w-[200px] hover:opacity-50" src="https://source.unsplash.com/random/?cofe" alt="" />
+      </div>
+    </div>
+
+    <script>
+        let hero = document.querySelector(".hero img");
+        let thumbnail = document.querySelector(".thumbnail");
+        let thumb = document.querySelectorAll('.thumb');
+
+        thumbnail.addEventListener("click", function (e) {
+            for(i of thumb){
+              i.classList.remove('aktive')
+            }
+            
+            hero.src = e.target.src;
+            e.target.classList.add("aktive");
+        });
+
+
+        
+
+
+    </script>
+  </body>
+</html>

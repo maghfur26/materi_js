@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //foreach
+        let array = ["maghfur", "hasani"];
+        array.forEach((value, index) => console.log(`index ke${index} : ${value}`)) //urutan parameter 1= value(nama bebas), 2=index(nama bebas)
+
+        let lastIndex = array.lastIndexOf
+
+        console.log(lastIndex)
+
+
+        //metode map(), Metode ini berfungsi untuk membuat array baru sambil mengecek/melakukan operasi terhadap setiap elemen array.
+        const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        // membuat array baru dari array angka untuk memeriksa apakah setiap elemennya bernilai habis dibagi 2 atau tidak
+        const mapedArray = angka.map(item => item % 2 === 0);
+        console.log(mapedArray); // output: [false, true, false, true, false, true, false, true, false]
+
+        // membuat array baru dari array angka untuk melakukan operasi perkalian 2 pada setiap elemennya
+        const multipleOfTwo = angka.map(e => e * 2);
+        console.log(multipleOfTwo); // Output: [2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+
+    {
+        //metode include(), Metode ini berfungsi untuk mengecek apakah pada elemen array memenuhi suatu kondisi atau tidak.
+        const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        
+        const something = angka.includes(2);
+        const any = angka.includes(10);
+        
+        console.log(something); // Output: true
+        console.log(any); // Output: false
+        
+
+        //metode reduce(), untuk mereduce elemen array menjadi single value dengan menjumlah setiap elemen (dari kiri ke kanan).
+        let sum = angka.reduce((value, index) => value + index )
+        console.log(`total = ${sum}`)
+    }
+        
+
+    </script>
+</body>
+</html>

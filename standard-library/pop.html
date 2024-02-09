@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //menghapus data dari index terakhir dengan metode pop();
+        class Keluarga{
+            nama = [];
+            
+            tambahData(value) {
+                this.nama.push(value);
+                return this.nama
+            }
+        }
+        
+        
+        let keluarga1 = new Keluarga
+        
+        keluarga1.tambahData("maghfur");
+        keluarga1.tambahData("danish");
+        console.log(keluarga1.nama.pop())
+        console.log(keluarga1.nama.pop())
+        console.log(keluarga1.nama)//array sudah habis jadi undefined
+
+
+    </script>
+</body>
+</html>

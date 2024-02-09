@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // closure berfungsi agar local skop bisa diakses menjadi global scoop atau dimanapun
+        function pangkat(value) {
+            const owner = "maghfur hasani";
+            
+            function angka(nilai) {
+                let hasil = (nilai**value);
+                return hasil
+            }
+            return angka //disinilah clouser dimulai dimana kita mau mengambil nilai dari local scop var hasil sehingga dia bisa diakses di global scoop
+        }
+
+        let pangkat2 = pangkat(2)
+
+        document.writeln(pangkat2(5))
+    </script>
+</body>
+</html>

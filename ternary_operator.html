@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //tanpa ternary operator
+        let nilai1 = 89;
+        let hasil; //ketika menggunakan if harus inisialisasi var dulu 
+        if(nilai1 <= 75){
+            hasil = "anda belum lulus"
+        }else if(nilai1 >= 80) {
+            hasil = "anda lulus"
+        }else{
+            hasil = "inputan anda salah"
+        }
+
+        document.writeln(hasil)
+
+
+        //dengan ternary operator
+        let nilai = 80
+
+        const kesimpulan = nilai >= 80 ? "anda lulus" : "anda gagal";
+        document.writeln(kesimpulan)
+    </script>
+</body>
+</html>

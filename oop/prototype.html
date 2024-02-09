@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //prototype sendiri dieksekusi setelah instance object(parent object utama/function utama) jika di instance object tdk ada maka js akan lakukan ekseskusi ke instance dan jika tidak ada maka akan lanjut ke prototype
+        
+        //sekarang sudah tidakdi anjurkan untuk digunakan karena di ECMA6 sudah digantikan dengan kata keunci class
+
+        //instance object
+        function Person(firstName) {
+            this.firstName = firstName;
+            this.sayHello = function() {
+                console.log('hello ', firstName);
+            }
+        }
+
+        Person.prototype.goodby = function() {
+            console.log(`good bye ${this.firstName}`) //akan muncul di prototype dan bisa di iterasi
+        }
+
+        let saya = new Person("maghfur"); //instance
+        console.log(saya);
+        
+        let danish = new Person("ahza") //instance
+        console.log(danish);
+        danish.goodby()
+
+
+
+    </script>
+
+</body>
+</html>

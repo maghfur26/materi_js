@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //contoh program faktorial dengan recursive function
+        function recursiveFuntion(value){
+            if(value===1){
+                return 1
+            }else{
+                return value * recursiveFuntion(value-1)
+            }
+        }
+
+        document.writeln(recursiveFuntion(5))
+        document.writeln(5*4*3*2*1)
+
+        //tanpa recursive
+        function faktorial(nilai){
+            let total = 1
+            for(let i=1;i<=nilai;i++){
+                total*=i
+            }
+            return total
+        }
+
+        document.writeln(faktorial(5))
+
+    </script>
+</body>
+</html>

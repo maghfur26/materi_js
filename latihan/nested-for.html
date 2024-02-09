@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // untuk membuat segitiga samakaki terbalik
+      function samaKakiTerbalik(panjang) {
+        let hasil = "";
+        for (let i = 0; i < panjang; i++) {
+          for (let x = 0; x <= i; x++) {
+            hasil += " ";
+          }
+          for (let j = panjang; j > i; j--) {
+            hasil += "* ";
+          }
+          hasil += "\n";
+        }
+        return hasil;
+      }
+      console.log(samaKakiTerbalik(5));
+
+      // segitiga samakaki
+      function samaKaki(baris) {
+        let hasil = "";
+
+        for (let i = 0; i < baris; i++) {
+          for (let j = baris; j > i; j--) {
+            hasil += " ";
+          }
+          for (let x = 0; x <= i; x++) {
+            hasil += "* ";
+          }
+          hasil += "\n";
+        }
+        return hasil;
+      }
+      console.log(samaKaki(5));
+
+      //
+      function segitiga(baris) {
+        let hasil = "";
+        for (let i = 0; i < baris; i++) {
+          for (let j = 0; j <= i; j++) {
+            hasil += "* ";
+          }
+          hasil += "\n";
+        }
+        return hasil;
+      }
+
+      console.log(segitiga(5));
+
+      function segitigaSetengah(baris) {
+        let hasil = "";
+        for (let i = 0; i <= baris; i++) {
+          for (let j = baris; j > i; j--) {
+            hasil += "* ";
+          }
+          hasil += "\n";
+        }
+        return hasil;
+      }
+
+      console.log(segitigaSetengah(5));
+
+      const siswa = [
+        ["maghfur", "hasani"],
+        ["irfi", "yanda"],
+      ];
+
+      for (let i = 0; i < siswa.length; i++) {
+        const dataMhs = siswa[i];
+        console.log(`kelompok ${i + 1}`);
+        for (let j = 0; j < dataMhs.length; j++) {
+          console.log(`    ${dataMhs[j]}`);
+        }
+      }
+    </script>
+  </body>
+</html>

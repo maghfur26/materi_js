@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>factory function adl dimana kita memasukan function didlm function dan memberi argument sendiri2 pada setiap function </h5>
+
+    <script>
+
+        // factory function
+        function Sapa(waktu){
+            return function(nama) { //ini adalah closure sebagai factory function
+                return `selamat ${waktu}, saudara ${nama}`
+            }
+        }
+
+        let pagi = Sapa('pagi')
+        console.log(pagi('maghfur'))
+
+        let malam = Sapa('malam')
+        console.log(malam('mas sani'))
+
+
+        //privat variable
+        let tambah = (function() {
+            let counter = 1
+            return function() {
+                return counter++
+            }   
+        })()
+
+        let counter = 10 // ketika ada var yg mempunyai nama yg sama maka var dlm closure tidak akan terpengaruh
+
+        console.log(tambah())
+        console.log(tambah())
+        console.log(tambah())
+
+
+    </script>
+</body>
+</html>

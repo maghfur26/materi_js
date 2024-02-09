@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //digunakan untuk data yg sudah terlanjur tipenya aray,fungsinya sama seperti rest-parameter
+        let angka = [2, 2, 3, 4, 10]
+        let hasil = 0
+        function trial(value, ...angka){
+            for(i of angka) {
+                hasil+=i
+            }
+            document.writeln(`total dari ${value} adalah ${hasil}`)
+        }
+
+        trial("orange", ...angka)
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //dimana didalam parameter kita bisa memasukan banyak value dan menjadikanya menjadi aray secara otomatis
+        function tambah(nama, ...nilai) {
+            let total = 0
+            for(i of nilai){
+                total+=i
+            }
+            document.writeln(`total dari ${nama} adalah ${total}`)
+        }
+
+        tambah("orange", 1, 3, 4, 7, 10)
+
+        //tidak bs digunakan untuk tipe data yg sudah array,ketika sudah terlanjur datanya berupa aray,bisa menggunakan spred syntax rest parameter
+      
+    </script>
+</body>
+</html>
