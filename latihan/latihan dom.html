@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/style.css">
+    <title>Papan score</title>
+  </head>
+  <body class="bg-slate-900">
+    <header>
+        <h1 class="text-center font-mono m-10 font-semibold text-4xl uppercase text-red-600">papan score</h1>
+    </header>
+
+    <main class="flex flex-col justify-center items-center text-slate-100">
+        <header class="bg-white bg-opacity-20 backdrop-blur-2xl drop-shadow-lg text-center font-semibold text-2xl border border-white rounded-lg px-5 py-5">
+          <span id="p1-display">0</span>
+          vs
+          <span id="p2-display">0</span>
+        </header>
+        <div class="list-button align-middle">
+            <button id="p1-button" class="bg-blue-600 mx-2 my-4 px-2 py-1 rounded-lg">Player 1</button>
+            <button id="p2-button" class="bg-red-600 mx-2 my-4 px-2 py-1 rounded-lg">Player 2</button>
+            <button id="reset-button" class="text-slate-600 bg-yellow-300 mx-2 my-4 px-2 py-1 rounded-lg">Reset</button>
+        </div>
+    </main>
+
+    <script>
+      const p1Button = document.querySelector("#p1-button");
+      const p2Button = document.querySelector("#p2-button");
+      const resetButton = document.querySelector("#reset-button");
+
+      const p1Display = document.querySelector("#p1-display");
+      const p2Display = document.querySelector("#p2-display");
+
+      let p1Score = 0;
+      let p2Score = 0;
+      let scoreWin = 5;
+      let isGameOver = false;
+
+      p1Button.addEventListener('click', () => {
+        if (!isGameOver) {
+            p1Score ++;
+            if (p1Score == scoreWin) {
+                isGameOver = true;
+            }
+            p1Display.textContent = p1Score;
+        }
+    })
+    
+    p2Button.addEventListener('click', () => {
+      if (!isGameOver) {
+          p2Score ++;
+          if (p2Score == scoreWin) {
+              isGameOver = true;
+          }
+          p2Display.textContent = p2Score;
+      }
+    })
+
+    resetButton.addEventListener('click', () => {
+        p1Score = 0;
+        p2Score = 0;
+        isGameOver = false
+
+        p1Display.textContent = p1Score;
+        p2Display.textContent = p2Score;
+    })
+
+
+    </script>
+  </body>
+</html>

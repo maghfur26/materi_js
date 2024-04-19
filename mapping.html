@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Map adalah tipe data yang menyimpan koleksi data dengan format key-value layaknya Object. Yang membedakan adalah Map memperbolehkan key dengan tipe data apa pun, dibandingkan Object yang hanya mengizinkan key bertipe String atau Symbol.</p>
+    <p>Ketika sudah membuat objek Map, kita bisa mendapatkan nilainya berdasarkan key tertentu dengan metode get(). Lalu, untuk menambahkan pasangan key-value baru gunakan metode set().</p>
+
+    <script>
+        const currency = new Map([
+        ["JPY", 120],
+        ["USD", 14000],
+        ["SGD", 11000],
+        ["MYR", 3500],
+        ]);
+
+        const priceInJPY = 1100;
+        const priceIDR = priceInJPY*currency.get('JPY');
+        
+        // menambkannilai ke dalam object map dengan setter
+        currency.set('RINGGIT', 1000)
+        
+        console.log(currency)
+        console.log(priceIDR)
+        
+    
+    </script>
+</body>
+</html>
